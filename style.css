@@ -174,12 +174,8 @@ img.bg{
 
 .conteudo-hero{
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding: 6em 1em 0 1rem;
     color: white;
@@ -214,13 +210,29 @@ img.bg{
     .btn-header{
         display: block;
     }
+
+    .conteudo-hero{
+        padding: 6em 2em 2em 5em;  
+    }
+
 }
 
 /*Desktop*/
 @media (min-width: 1024px ){
 
+    header{
+        padding: 0 9em 0 9em;
+    }
+
+
+    .hero{
+        height: 85vh;
+    }
+
     .conteudo-hero{
         max-width: 900px;
+        margin-top: 4em;
+        padding: 6em 2em 2em 15em; 
     }
 
 }
