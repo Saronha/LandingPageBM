@@ -7,7 +7,7 @@ Landing page desenvolvida para BodyMatch, startup de moda em fase de pré-incuba
 ## Deve conter:
 
 - Apresentação geral do produto oferecido pela bodymatch;
-- Design responsivo mobile first;
+- Design responsivo;
 - Sessão de call to action, onde os interessados possam deixar seu e-mail.
 
 ## Tecnologias utilizadas

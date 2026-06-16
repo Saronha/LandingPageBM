@@ -35,6 +35,7 @@ a{
 }
 
 p{
+    font-size: clamp(.4rem,3.5vw,1.5rem);
     line-height:1.6;
     margin: .5em 0 .5em 0;
 }
@@ -194,10 +195,6 @@ nav{
     }
 }
 
-/*Desktop*/
-@media (min-width: 1024px){
-
-}
 
 /*==== HERO ====*/
 
@@ -209,9 +206,8 @@ nav{
 }
 
 .hero h1{
-    font-size: clamp(40px,6vw,60px);
+    font-size: clamp(30px,6vw,60px);
     line-height: 1.05;
-    
 }
 
 .hero h1 .destaque{
@@ -241,7 +237,7 @@ img.bg{
     padding: clamp(3em, 15vw, 6em) clamp(1em, 4vw, 2em) 2em clamp(1em, 12vw, 15em) ;
     color: white;
     gap: 1em;
-    max-width: clamp(0px, 100%, 900px);
+    max-width: clamp(0px, 80%, 900px);
     margin-top: clamp(0em, 3vw, 4em);
 }
 
@@ -268,8 +264,12 @@ img.bg{
 .cta-hero .ver:hover{
     color: var(--ciano);
 }
-
-
+/*mobile*/
+@media (max-width: 520px){
+    .cta-hero{
+        flex-direction: column;
+    }
+} 
 /*secçoes*/
 
 section p{
