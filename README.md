@@ -12,7 +12,6 @@ Landing page desenvolvida para BodyMatch, startup de moda em fase de pré-incuba
 
 ## Tecnologias utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
+A landing page está a ser desenvolvida apenas com HTML5, CSS3 e JavaScript, optando por uma stack simples e sem dependências externas, o que facilita a manutenção e futuras iterações por qualquer membro da equipa.
+
 

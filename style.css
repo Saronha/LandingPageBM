@@ -32,11 +32,23 @@ a{
     font-size: .9rem;
 }
 
+p{
+    line-height:1.6;
+    margin: .5em 0 .5em 0;
+}
+
 h1, h2, h3{
     font-family: var(--fonte);
     letter-spacing:-0.01em;
     margin:0;
-    font-weight:600
+    font-weight: 450;
+}
+
+h2{
+    font-size:clamp(32px,4.5vw,48px);
+    max-width:768px;
+    line-height:1.15;
+    color: var(--cinza-escuro);
 }
 
 img{
@@ -64,6 +76,10 @@ img{
 
 .btn:hover{
     background: var(--azul-escuro);
+}
+
+.destaque{
+    font-style: italic;
 }
 
 /* ===== HEADER ===== */
@@ -113,29 +129,20 @@ nav{
     font-weight: 500;
 }
 
-/* menu sanduiche*/
-/*
-nav{
-    display: flex;
-    align-items: center;
-}
-.menu-sanduiche{
-    display: block;
+/*Tablet*/
+@media (min-width: 768px){
+    .btn-header{
+        display: block;
+    }
 }
 
-.menu-sanduiche div{
-    width: 2em;
-    height: 0.25em;
-    background-color: var(--azul-escuro);
-    margin: 0.3em;
-    border-radius: 15%;
-}
+/*Desktop*/
+@media (min-width: 1024px ){
 
-.lista-nav{
-    position: fixed;
-    transform: translateX(125%);
+    header{
+        padding: 0 9em 0 9em;
+    }
 }
-*/
 
 /*==== HERO ====*/
 
@@ -153,7 +160,6 @@ nav{
 }
 
 .hero h1 .destaque{
-    font-style: italic;
     color: var(--ciano);
 }
 
@@ -187,6 +193,7 @@ img.bg{
 }
 
 .conteudo-hero p{
+    color: var(--background);
     line-height:1.6;
     margin: .5em 0 .5em 0;
 }
@@ -207,10 +214,6 @@ img.bg{
 
 /*Tablet*/
 @media (min-width: 768px){
-    .btn-header{
-        display: block;
-    }
-
     .conteudo-hero{
         padding: 6em 2em 2em 5em;  
     }
@@ -219,12 +222,6 @@ img.bg{
 
 /*Desktop*/
 @media (min-width: 1024px ){
-
-    header{
-        padding: 0 9em 0 9em;
-    }
-
-
     .hero{
         height: 85vh;
     }
@@ -233,6 +230,45 @@ img.bg{
         max-width: 900px;
         margin-top: 4em;
         padding: 6em 2em 2em 15em; 
+    }
+
+}
+
+/*secçoes*/
+
+section p{
+    color: var(--cinza-claro);
+}
+
+/*==== SECÇÃO 1 ====*/
+
+.seccao-1{
+    padding: 2em 1em 2em 1em;
+    background:rgba(236,237,241,.5)
+}
+
+.seccao-1 .eyebrow{
+    color: var(--ciano);
+    font-weight: 700;
+}
+.seccao-1 .destaque{
+    color: var(--azul-claro);
+    
+}
+
+/*Tablet*/
+@media (min-width: 768px){
+
+ .seccao-1{
+    padding: 2em 5em 2em 5em;
+ }
+}
+
+/*Desktop*/
+@media (min-width: 1024px ){
+
+    .seccao-1{
+        padding: 6em 2em 2em 15em;
     }
 
 }
