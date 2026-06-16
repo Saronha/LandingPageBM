@@ -29,7 +29,8 @@ body{
 
 a{
     text-decoration: none;
-    font-size: .9rem;
+    font-size: clamp(0.75rem, 1.5vw, 0.8rem);
+    white-space: nowrap;
 }
 
 p{
@@ -45,8 +46,7 @@ h1, h2, h3{
 }
 
 h2{
-    font-size:clamp(32px,4.5vw,48px);
-    max-width:768px;
+    font-size:clamp(2rem,4.5vw,3rem);
     line-height:1.15;
     color: var(--cinza-escuro);
 }
@@ -57,21 +57,22 @@ img{
 }
 
 .eyebrow{
-    font-size: .8rem;
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
     text-transform: uppercase;
     letter-spacing: .25em;
     font-weight: 500;
-    /*margin-bottom: 1rem;*/
 }
 
 .btn{
     background: var(--azul-claro);
     color: white;
     font-weight:600;
-    padding: 1em 1.5em 1em 1.5em;
+    padding: clamp(0.7em, 1.5vw, 1em) clamp(1em, 2vw, 1.5em);
     border-radius: 50px;
     transition:.2s;
-    box-shadow:0 10px 25px -10px rgba(0,0,0,.3)
+    box-shadow:0 10px 25px -10px rgba(0,0,0,.3);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    white-space: nowrap;
 }
 
 .btn:hover{
@@ -94,7 +95,7 @@ header{
     justify-content: space-between;
     height: 8vh;
     box-shadow: 0px 0px 10px 5px rgba(32, 38, 32, 0.12);
-    padding: 0 1em 0 .5em;
+    padding: 0 clamp(0.5em, 8vw, 9em);
 }
 
 .lista-nav a{
@@ -106,7 +107,7 @@ header{
 }
 
 .logo{
-  width: 150px;
+  width: clamp(100px, 15vw, 150px);
 
 }
 
@@ -114,7 +115,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: clamp(0.5em, 2vw, 1em);
 }
 
 .lista-nav{
@@ -136,20 +137,14 @@ nav{
     }
 }
 
-/*Desktop*/
-@media (min-width: 1024px ){
 
-    header{
-        padding: 0 9em 0 9em;
-    }
-}
 
 /*==== HERO ====*/
 
 .hero{
     position: relative;
     width: 100vw;
-    height: 60vh;
+    height: clamp(60vh, 75vw, 85vh);
     margin-top: 3em;
 }
 
@@ -183,9 +178,11 @@ img.bg{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 6em 1em 0 1rem;
+    padding: clamp(3em, 8vw, 6em) clamp(1em, 4vw, 2em) 2em clamp(1em, 12vw, 15em);
     color: white;
-    gap: 1em
+    gap: 1em;
+    max-width: clamp(0px, 100%, 900px);
+    margin-top: clamp(0em, 3vw, 4em);
 }
 
 .conteudo-hero .eyebrow{
@@ -212,27 +209,6 @@ img.bg{
     color: var(--ciano);
 }
 
-/*Tablet*/
-@media (min-width: 768px){
-    .conteudo-hero{
-        padding: 6em 2em 2em 5em;  
-    }
-
-}
-
-/*Desktop*/
-@media (min-width: 1024px ){
-    .hero{
-        height: 85vh;
-    }
-
-    .conteudo-hero{
-        max-width: 900px;
-        margin-top: 4em;
-        padding: 6em 2em 2em 15em; 
-    }
-
-}
 
 /*secçoes*/
 
@@ -243,7 +219,7 @@ section p{
 /*==== SECÇÃO 1 ====*/
 
 .seccao-1{
-    padding: 2em 1em 2em 1em;
+    padding: clamp(2em, 5vw, 6em) clamp(1em, 10vw, 15em);
     background:rgba(236,237,241,.5)
 }
 
@@ -256,19 +232,3 @@ section p{
     
 }
 
-/*Tablet*/
-@media (min-width: 768px){
-
- .seccao-1{
-    padding: 2em 5em 2em 5em;
- }
-}
-
-/*Desktop*/
-@media (min-width: 1024px ){
-
-    .seccao-1{
-        padding: 6em 2em 2em 15em;
-    }
-
-}
