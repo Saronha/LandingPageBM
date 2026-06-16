@@ -20,6 +20,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body{
@@ -98,18 +99,6 @@ header{
     padding: 0 clamp(0.5em, 8vw, 9em);
 }
 
-.lista-nav a{
-    color: var(--cinza-claro);
-    transition: .2s;
-}
-.lista-nav a:hover{
-    color: var(--cinza-escuro);
-}
-
-.logo{
-  width: clamp(100px, 15vw, 150px);
-
-}
 
 nav{
     display: flex;
@@ -118,26 +107,97 @@ nav{
     gap: clamp(0.5em, 2vw, 1em);
 }
 
+.lista-nav .item-nav{
+    color: var(--cinza-claro);
+    transition: .2s;
+}
+.lista-nav .item-nav:hover{
+    color: var(--cinza-escuro);
+}
+
+
+.logo{
+  width: clamp(100px, 15vw, 150px);
+
+}
+
+.btn-header{ /*só vai aparecer na versão tablet e desktop*/
+    
+    padding: .7em 1em .7em 1em;
+    font-weight: 500;
+    color: white;
+}
+
+
+/* menu sanduiche*/
+
+nav{
+    display: flex;
+    align-items: center;
+}
+.menu-sanduiche{
+    display: block;
+}
+
+.menu-sanduiche div{
+    width: 2em;
+    height: 0.25em;
+    background-color: var(--azul-escuro);
+    margin: 0.3em;
+    border-radius: 15%;
+}
+
 .lista-nav{
     list-style: none;
     display: flex;
     gap: 1em;
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background: var(--background);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2em;
+    gap: 2em;
+    transform: translateX(125%);
+    transition: transform 0.4s ease;
 }
 
-.btn-header{ /*só vai aparecer na versão tablet e desktop*/
-    display: none;
-    padding: .7em 1em .7em 1em;
-    font-weight: 500;
+.lista-nav.active{
+    transform: translateX(0);
+    display: flex;
 }
+
+
 
 /*Tablet*/
 @media (min-width: 768px){
     .btn-header{
         display: block;
     }
+
+    .menu-sanduiche{
+        display: none;
+    }
+
+    .lista-nav{
+        position: static;
+        flex-direction: row;
+        transform: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background: transparent;
+    }
 }
 
+/*Desktop*/
+@media (min-width: 1024px){
 
+}
 
 /*==== HERO ====*/
 
@@ -178,7 +238,7 @@ img.bg{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: clamp(3em, 8vw, 6em) clamp(1em, 4vw, 2em) 2em clamp(1em, 12vw, 15em);
+    padding: clamp(3em, 15vw, 6em) clamp(1em, 4vw, 2em) 2em clamp(1em, 12vw, 15em) ;
     color: white;
     gap: 1em;
     max-width: clamp(0px, 100%, 900px);
