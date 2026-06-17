@@ -2,13 +2,19 @@
 
 :root{
    --background:#F5F6F8; 
+   --background-escuro:#e5e7e767;
    --cinza-escuro: #1A2238;
    --cinza-claro: #6B7088;
+   --cinza-clarissimo: #6b70883c;
    --azul-escuro:#3F4FB8;;
    --azul-claro: #5B6FD8;
    --ciano:#8FE3D0;
    --fonte: "Playfair Display", Georgia, serif;
    --fonte-sans:"Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+   --tamanho-h1: clamp(2.5rem,7vw,4rem);
+   --tamanho-h2: clamp(2rem, 5vw,3.5rem);
+   --tamaho-h3: clamp(1.5rem,2.5vw,1.5rem);
+   --padding-seccoes: clamp(2em, 5vw, 6em) clamp(1em, 7vw, 15em);
    --gradiente:linear-gradient(to right, rgb(0, 0, 0, 0.75), rgba(0,0,0,.55), rgba(0,0,0,.3));
 }
 
@@ -35,7 +41,7 @@ a{
 }
 
 p{
-    font-size: clamp(.4rem,3.5vw,1.5rem);
+    font-size: clamp(.9rem,1.25vw,1.5rem);
     line-height:1.6;
     margin: .5em 0 .5em 0;
 }
@@ -44,13 +50,25 @@ h1, h2, h3{
     font-family: var(--fonte);
     letter-spacing:-0.01em;
     margin:0;
-    font-weight: 450;
+    font-weight: 300;
 }
 
+h1{
+    font-size: var(--tamanho-h1);
+    line-height: 1.05;
+    transform: scaleY(1.05); /* Estica apenas a largura em 1.5x */
+    display: inline-block;  /* Necessário para o transform funcionar em textos */
+}
+
+
 h2{
-    font-size:clamp(2rem,4.5vw,3rem);
+    font-size:var(--tamanho-h2);
     line-height:1.15;
     color: var(--cinza-escuro);
+}
+
+h3{
+    font-size: var(--tamaho-h3);
 }
 
 img{
@@ -58,11 +76,18 @@ img{
    display: block;
 }
 
+hr{
+    border: none;
+    height: .5px;
+    background-color: var(--cinza-clarissimo);
+}
+
 .eyebrow{
-    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+    font-size: clamp(0.8rem, 1.5vw, 0.8rem);
     text-transform: uppercase;
     letter-spacing: .25em;
     font-weight: 500;
+    color: #5B6FD8;
 }
 
 .btn{
@@ -201,13 +226,8 @@ nav{
 .hero{
     position: relative;
     width: 100vw;
-    height: clamp(60vh, 75vw, 85vh);
+    height: clamp(65vh, 75vw, 85vh);
     margin-top: 3em;
-}
-
-.hero h1{
-    font-size: clamp(30px,6vw,60px);
-    line-height: 1.05;
 }
 
 .hero h1 .destaque{
@@ -234,11 +254,10 @@ img.bg{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: clamp(3em, 15vw, 6em) clamp(1em, 4vw, 2em) 2em clamp(1em, 12vw, 15em) ;
+    padding: clamp(2em, 12vw, 8em) clamp(2em, 4vw, 4em) 2em clamp(1em, 12vw, 15em) ;
     color: white;
     gap: 1em;
-    max-width: clamp(0px, 80%, 900px);
-    margin-top: clamp(0em, 3vw, 4em);
+    max-width: clamp(0px, 80%, 600px);
 }
 
 .conteudo-hero .eyebrow{
@@ -276,11 +295,11 @@ section p{
     color: var(--cinza-claro);
 }
 
-/*==== SECÇÃO 1 ====*/
+/*==== SECÇÃO 1 inteligência visual ====*/
 
 .seccao-1{
-    padding: clamp(2em, 5vw, 6em) clamp(1em, 10vw, 15em);
-    background:rgba(236,237,241,.5)
+    padding: var(--padding-seccoes);
+    background:var(--background);
 }
 
 .seccao-1 .eyebrow{
@@ -289,6 +308,39 @@ section p{
 }
 .seccao-1 .destaque{
     color: var(--azul-claro);
-    
+}
+
+/*==== SECÇÃO 2 problemática ====*/
+
+.seccao-2{
+    padding: var(--padding-seccoes);
+    background:var(--background-escuro);
+}
+
+.cards{
+    display: grid; /*como é mobile first so declaro o gid template colums do media query*/
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.card{
+    background: var(--background);
+    border: .5px solid var(--cinza-clarissimo);
+    border-radius: 16px;
+    padding: clamp(1em, 2vw, 2em);
+}
+
+.card h3{
+    margin-top: 1em;
+}
+
+.icon{
+    font-size: var(--tamanho-h2);
+}
+
+@media (min-width: 768px){
+    .cards{
+        grid-template-columns:repeat(3,1fr);
+    }
 }
 
