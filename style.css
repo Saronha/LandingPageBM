@@ -101,12 +101,13 @@ section{
     background: var(--azul-claro);
     color: white;
     font-weight:600;
-    padding: clamp(0.7em, 1.5vw, 1em) clamp(1em, 2vw, 1.5em);
     border-radius: 50px;
     transition:.2s;
     box-shadow:0 10px 25px -10px rgba(0,0,0,.3);
-    font-size: clamp(0.85rem, 2vw, 1rem);
+    font-size: clamp(0.85rem, 3vw, 1rem);
     white-space: nowrap;
+    padding: 1em 2em;
+    
 }
 
 .btn:hover{
@@ -436,6 +437,71 @@ section p{
     text-align: center;
 }
 
+/*==== CTA ====*/
+.cta{
+    background: var(--cinza-escuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.cta .eyebrow{
+    color: var(--ciano);
+}
+.cta h2{
+    color: var(--background);
+    font-size: clamp(2rem,4.5vw,3rem);
+}
+
+.cta form{
+    width: 100%;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.162);
+    padding: .5em;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.074);
+}
+
+form input{
+    background:transparent;
+    color:#fff;
+    border:0;
+    padding: .75em 1.25em;
+    border-radius: 50px;
+    outline:none;
+    font-size:.93rem;
+}
+
+form input:focus{
+    background:rgba(255,255,255,.05)
+}
+
+form .btn{
+    background: var(--background);
+    color: var(--azul-escuro);
+    border: 0;
+    padding: 1em 2em;
+    font-size: 1rem;
+}
+
+form .btn:hover{
+    background: var(--ciano);
+    color: var(--cinza-escuro);
+    border: 0;
+}
+
+.detalhe{
+    font-size: .8rem;
+}
+
+@media (min-width: 500px){
+    .cta form{
+        width: auto;
+    }
+}
+
 /*==== FOOTER ====*/
 footer{
     padding: var(--padding-seccoes);
@@ -454,5 +520,6 @@ footer{
     align-items: center;
     gap: 1em;
 }
+
 
 
