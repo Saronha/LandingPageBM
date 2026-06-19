@@ -12,7 +12,7 @@
    --fonte: "Playfair Display", Georgia, serif;
    --fonte-sans:"Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
    --tamanho-h1: clamp(2.5rem,7vw,4rem);
-   --tamanho-h2: clamp(2rem, 5vw,3.5rem);
+   --tamanho-h2: clamp(1.8rem, 5vw,2.2rem);
    --tamaho-h3: clamp(1.5rem,2.5vw,1.5rem);
    --padding-h: clamp(1em, 7vw, 15em);
    --padding-v: clamp(2em, 5vw, 6em);
@@ -84,6 +84,10 @@ hr{
     background-color: var(--cinza-clarissimo);
 }
 
+section{
+    padding: var(--padding-seccoes);
+}
+
 
 .eyebrow{
     font-size: clamp(0.8rem, 1.5vw, 0.8rem);
@@ -111,6 +115,7 @@ hr{
 
 .destaque{
     font-style: italic;
+    color: var(--azul-claro);
 }
 
 /* ===== HEADER ===== */
@@ -301,7 +306,6 @@ section p{
 /*==== SECÇÃO 1 - inteligência visual ====*/
 
 .seccao-1{
-    padding: var(--padding-seccoes);
     background:var(--background);
 }
 
@@ -316,7 +320,6 @@ section p{
 /*==== SECÇÃO 2 - problemática ====*/
 
 .seccao-2{
-    padding: var(--padding-seccoes);
     background:var(--background-escuro);
 }
 
@@ -350,7 +353,6 @@ section p{
 /*==== SECÇÃO 3 - como funciona ====*/
 
 .seccao-3{
-    padding: var(--padding-seccoes);
     background:var(--background);
     display: flex;
     flex-direction: column;
@@ -426,3 +428,11 @@ section p{
         width: 70px; 
     }
 }
+
+/*==== SECÇÃO 5 - para quem é ====*/
+
+.seccao-5{
+    background: var(--background-escuro);
+    text-align: center;
+}
+
