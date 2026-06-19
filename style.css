@@ -14,7 +14,9 @@
    --tamanho-h1: clamp(2.5rem,7vw,4rem);
    --tamanho-h2: clamp(2rem, 5vw,3.5rem);
    --tamaho-h3: clamp(1.5rem,2.5vw,1.5rem);
-   --padding-seccoes: clamp(2em, 5vw, 6em) clamp(1em, 7vw, 15em);
+   --padding-h: clamp(1em, 7vw, 15em);
+   --padding-v: clamp(2em, 5vw, 6em);
+   --padding-seccoes: var(--padding-v) var(--padding-h);
    --gradiente:linear-gradient(to right, rgb(0, 0, 0, 0.75), rgba(0,0,0,.55), rgba(0,0,0,.3));
 }
 
@@ -81,6 +83,7 @@ hr{
     height: .5px;
     background-color: var(--cinza-clarissimo);
 }
+
 
 .eyebrow{
     font-size: clamp(0.8rem, 1.5vw, 0.8rem);
@@ -295,7 +298,7 @@ section p{
     color: var(--cinza-claro);
 }
 
-/*==== SECÇÃO 1 inteligência visual ====*/
+/*==== SECÇÃO 1 - inteligência visual ====*/
 
 .seccao-1{
     padding: var(--padding-seccoes);
@@ -310,7 +313,7 @@ section p{
     color: var(--azul-claro);
 }
 
-/*==== SECÇÃO 2 problemática ====*/
+/*==== SECÇÃO 2 - problemática ====*/
 
 .seccao-2{
     padding: var(--padding-seccoes);
@@ -344,3 +347,82 @@ section p{
     }
 }
 
+/*==== SECÇÃO 3 - como funciona ====*/
+
+.seccao-3{
+    padding: var(--padding-seccoes);
+    background:var(--background);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.passos {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2em, 5vw, 5em);
+    position: relative;
+}
+
+/* linha vertical mobile */
+.passos::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    left: 25px; 
+    background: linear-gradient(to top, transparent, rgba(143, 227, 207, 0.767), transparent);
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.passo .icon {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    background: var(--background);
+    border: 2px solid var(--azul-claro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.passo .icon p {
+    font-family: "Playfair Display", serif;
+    color: var(--azul-claro);
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .passos {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    /* linha vertical mobile */
+    .passos::before {
+        width: auto;
+        height: 2px;
+        top: 35px; 
+        bottom: auto;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, transparent, rgba(143, 227, 207, 0.767), transparent);
+    }
+
+    .passo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .passo .icon {
+        width: 70px; 
+    }
+}
