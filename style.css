@@ -430,10 +430,39 @@ section p{
     }
 }
 
+/*==== SECÇÃO 4 - pq bodymatch ====*/
+.seccao-4{
+    background: var(--background-escuro);
+}
+
+.razoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.razoes .razao{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.razao p{
+    font-size: clamp(1rem,1.25vw,1.5rem);;
+}
+
+.seccao-4 .icon{
+    font-family: "Playfair Display", serif;
+    color: var(--ciano);
+    font-size: 1.125rem;
+       
+}
+
+
+
 /*==== SECÇÃO 5 - para quem é ====*/
 
 .seccao-5{
-    background: var(--background-escuro);
+    background: var(--background);
     text-align: center;
 }
 
