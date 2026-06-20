@@ -19,5 +19,5 @@ Landing page desenvolvida para BodyMatch, startup de moda em fase de pré-incuba
 
 ## Acesse
 
- https://saronha.github.io/LandingPageBM/
+ https://bodymatch.netlify.app/
 
