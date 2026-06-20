@@ -34,6 +34,7 @@ html{
 body{
     background: var(--background);
     overflow-x: hidden;
+    
 }
 
 a{
@@ -87,6 +88,25 @@ hr{
 section{
     padding: var(--padding-seccoes);
 }
+
+.revelacao{
+    opacity:0
+}
+
+.revelacao-in{
+    animation:fade-up .8s ease-out forwards
+}
+
+@keyframes fade-up{
+    from{
+        opacity:0;
+        transform:translateY(20px)
+    }to{
+        opacity:1;
+        transform:translateY(0)}
+}
+
+/* Reveal animation */
 
 
 .eyebrow{

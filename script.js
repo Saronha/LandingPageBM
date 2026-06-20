@@ -49,3 +49,16 @@ const mobileNavbar = new MenuSanduiche(
 );
 
 mobileNavbar.init()
+
+// Reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      const d = e.target.getAttribute('data-delay') || 0;
+      e.target.style.animationDelay = d + 'ms';
+      e.target.classList.add('revelacao-in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.revelacao').forEach((el) => io.observe(el));
